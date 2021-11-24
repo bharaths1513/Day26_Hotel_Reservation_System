@@ -36,8 +36,7 @@ public class HotelReservation extends Hotel {
 		return weekEnds;
 	}
 
-	// finding best rate and cheap hotel as per requirement with have two rates in
-	// reward and normal rates
+	// finding best rate and cheap hotel as per requirement with have two rates in reward and normal rates
 	public void getMinPriceBestRatedHotel(int weekEndsCount, int weekDaysCount, int opt) {
 		Hotel minWeekDays = hotelDetails.stream().min(Comparator.comparing(Hotel::getHotelPriceWeekDays)).orElseThrow();
 		Hotel minWeekEnd = hotelDetails.stream().min(Comparator.comparing(Hotel::getHotelPriceWeekEnds)).orElseThrow();
